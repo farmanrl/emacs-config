@@ -41,23 +41,6 @@
 (setq column-number-mode t)
 (show-paren-mode t)
 
-;;Theme behavior
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (monokai)))
- '(custom-safe-themes
-   (quote
-    ("a800120841da457aa2f86b98fb9fd8df8ba682cebde033d7dbf8077c1b7d677a" "70403e220d6d7100bae7775b3334eddeb340ba9c37f4b39c189c2c29d458543b" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 ;;Confirmation behavior
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -87,6 +70,10 @@
 ;;Dashboard behavior
 (require 'dashboard)
 (dashboard-setup-startup-hook)
+;; Set the title
+(setq dashboard-banner-logo-title "LET'S GET LIT")
+;; Set the banner
+(setq dashboard-startup-banner "/home/farmanrl/.emacs.d/fire.png")
 
 ;;Autocomplete behavior
 (ac-config-default)
@@ -137,6 +124,14 @@
 (cheatsheet-add :group "cheatsheet"
                 :key "C-x c"
                 :description "open cheatsheet")
+
+;;Theme behavior
+(custom-set-variables
+ '(custom-enabled-themes (quote (monokai)))
+ '(custom-safe-themes
+   (quote
+    ("a800120841da457aa2f86b98fb9fd8df8ba682cebde033d7dbf8077c1b7d677a" "70403e220d6d7100bae7775b3334eddeb340ba9c37f4b39c189c2c29d458543b" default))))
+(custom-set-faces)
 
 (provide 'init.el)
 ;;; init.el ends here
