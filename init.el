@@ -70,10 +70,6 @@
 ;;Dashboard behavior
 (require 'dashboard)
 (dashboard-setup-startup-hook)
-;; Set the title
-(setq dashboard-banner-logo-title "LET'S GET LIT")
-;; Set the banner
-(setq dashboard-startup-banner "/home/farmanrl/.emacs.d/fire.png")
 
 ;;Autocomplete behavior
 (ac-config-default)
